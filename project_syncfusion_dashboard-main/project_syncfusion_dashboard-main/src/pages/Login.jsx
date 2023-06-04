@@ -85,7 +85,7 @@ const Login = () => {
       console.log('Login successful');
       // Redirect to other options
       // Replace '/other-options' with the desired path
-      window.location.href = '/other-options';
+      window.location.href = '/home';
     } else {
       // Invalid username or password
       console.log('Invalid username or password');
