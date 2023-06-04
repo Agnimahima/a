@@ -1,6 +1,8 @@
 import React from 'react';
 import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
 import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
+import {SiJira} from 'react-icons/si'
+import {MdGroupAdd, MdMapsHomeWork} from 'react-icons/md'
 import { BsKanban, BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
 import { BiColorFill } from 'react-icons/bi';
 import { IoMdContacts } from 'react-icons/io';
@@ -22,6 +24,7 @@ import product5 from './product5.jpg';
 import product6 from './product6.jpg';
 import product7 from './product7.jpg';
 import product8 from './product8.jpg';
+import { SiJirasoftware } from 'react-icons/si';
 
 export const gridOrderImage = (props) => (
   <div>
@@ -470,12 +473,12 @@ export const employeesGrid = [
 ];
 
 export const links = [
-  {
+  { 
     title: 'Dashboard',
     links: [
       {
-        name: 'ecommerce',
-        icon: <FiShoppingBag />,
+        name: 'Home',
+        icon: <MdMapsHomeWork/>,
       },
     ],
   },
@@ -484,17 +487,21 @@ export const links = [
     title: 'Pages',
     links: [
       {
-        name: 'orders',
-        icon: <AiOutlineShoppingCart />,
+        name: 'Softwares',
+        icon: <SiJirasoftware/>,
       },
       {
         name: 'employees',
         icon: <IoMdContacts />,
       },
       {
-        name: 'customers',
+        name: 'scrumMaster',  //customer
         icon: <RiContactsLine />,
       },
+      {
+        name: 'addnewDetails',
+        icon:<MdGroupAdd/>
+      }
     ],
   },
   {
@@ -505,57 +512,65 @@ export const links = [
         icon: <AiOutlineCalendar />,
       },
       {
+        name:'addticket',
+        icon:<SiJira/>
+      },
+      {
+        name:'ticket',
+        icon:<SiJira/>
+      },
+      {
         name: 'kanban',
         icon: <BsKanban />,
       },
-      {
-        name: 'editor',
-        icon: <FiEdit />,
-      },
-      {
-        name: 'color-picker',
-        icon: <BiColorFill />,
-      },
+      // {
+      //   name: 'editor',
+      //   icon: <FiEdit />,
+      // },
+      // {
+      //   name: 'color-picker',
+      //   icon: <BiColorFill />,
+      // },
     ],
   },
-  {
-    title: 'Charts',
-    links: [
-      {
-        name: 'line',
-        icon: <AiOutlineStock />,
-      },
-      {
-        name: 'area',
-        icon: <AiOutlineAreaChart />,
-      },
+  // {
+  //   title: 'Charts',
+  //   links: [
+  //     {
+  //       name: 'line',
+  //       icon: <AiOutlineStock />,
+  //     },
+  //     {
+  //       name: 'area',
+  //       icon: <AiOutlineAreaChart />,
+  //     },
 
-      {
-        name: 'bar',
-        icon: <AiOutlineBarChart />,
-      },
-      {
-        name: 'pie',
-        icon: <FiPieChart />,
-      },
-      {
-        name: 'financial',
-        icon: <RiStockLine />,
-      },
-      {
-        name: 'color-mapping',
-        icon: <BsBarChart />,
-      },
-      {
-        name: 'pyramid',
-        icon: <GiLouvrePyramid />,
-      },
-      {
-        name: 'stacked',
-        icon: <AiOutlineBarChart />,
-      },
-    ],
-  },
+  //     {
+  //       name: 'bar',
+  //       icon: <AiOutlineBarChart />,
+  //     },
+  //     {
+  //       name: 'pie',
+  //       icon: <FiPieChart />,
+  //     },
+  //     {
+  //       name: 'financial',
+  //       icon: <RiStockLine />,
+  //     },
+  //     {
+  //       name: 'color-mapping',
+  //       icon: <BsBarChart />,
+  //     },
+  //     {
+  //       name: 'pyramid',
+  //       icon: <GiLouvrePyramid />,
+  //     },
+  //     {
+  //       name: 'stacked',
+  //       icon: <AiOutlineBarChart />,
+  //     },
+  //   ],
+  // },
 ];
 
 export const cartData = [

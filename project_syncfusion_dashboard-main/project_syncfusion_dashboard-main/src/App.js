@@ -4,10 +4,12 @@ import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 
 import { Navbar, Footer, Sidebar, ThemeSettings } from './components';
-import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor } from './pages';
+import { Ecommerce, Orders, Calendar, Employees, Stacked, Pyramid, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor, Softwares, Login, AddingDetails, AddTicket, TicketTable } from './pages';
 import './App.css';
 
 import { useStateContext } from './contexts/ContextProvider';
+import ScrumMaster from './pages/ScrumMaster';
+import Home from './pages/Home';
 
 const App = () => {
   const { setCurrentColor, setCurrentMode, currentMode, activeMenu, currentColor, themeSettings, setThemeSettings } = useStateContext();
@@ -64,17 +66,21 @@ const App = () => {
               {themeSettings && (<ThemeSettings />)}
 
               <Routes>
-                {/* dashboard  */}
-                <Route path="/" element={(<Ecommerce />)} />
-                <Route path="/ecommerce" element={(<Ecommerce />)} />
 
+                {/* dashboard  */}
+                <Route path="/" element={(<Home/>)} />
+                <Route path="/home" element={(<Home />)} />
+                <Route path="/login" element={(<Login/>)}/>
                 {/* pages  */}
-                <Route path="/orders" element={<Orders />} />
+                <Route path="/softwares" element={<Softwares />} />
                 <Route path="/employees" element={<Employees />} />
-                <Route path="/customers" element={<Customers />} />
+                <Route path="/scrummaster" element={<ScrumMaster/>} />
+                <Route path = "/addnewdetails" element={<AddingDetails/>}/>
 
                 {/* apps  */}
                 <Route path="/kanban" element={<Kanban />} />
+                <Route path = "/addticket" element={<AddTicket/>}/>
+                <Route path = "/ticket" element = {<TicketTable/>}/>
                 <Route path="/editor" element={<Editor />} />
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/color-picker" element={<ColorPicker />} />
