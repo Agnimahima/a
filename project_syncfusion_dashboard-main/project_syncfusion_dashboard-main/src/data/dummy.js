@@ -515,10 +515,7 @@ export const links = [
         name:'addticket',
         icon:<SiJira/>
       },
-      {
-        name:'ticket',
-        icon:<SiJira/>
-      },
+    
       {
         name: 'kanban',
         icon: <BsKanban />,
